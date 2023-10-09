@@ -4,6 +4,7 @@ import axios from 'axios'
 import { getRandomNumber } from './utils/randomNumber'
 import Location from './components/Location'
 import ResidentsList from './components/ResidentsList'
+import Header from './components/Header'
 
 
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <main className='bg-[url("/bg.png")] bg-cover bg-center z-0 w-full min-h-screen font-body'>
+      <Header />
       <Location location={location} setLocation={setLocation}/>
       <ResidentsList residents={location?.residents ?? []}/>
     </main>
