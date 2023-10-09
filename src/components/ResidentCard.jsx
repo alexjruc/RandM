@@ -26,12 +26,12 @@ const ResidentCard = ({residentEndpoint}) => {
                     <span>{residentInfo?.status}</span>
                 </div>
             </picture>
-            <div className="p-4 text-white">
-                <h3 className="text-center font-bold">{residentInfo?.name}</h3>
-                <ul>
-                    <li>Specie <span className="font-bold">{residentInfo?.species}</span></li>
-                    <li>Origin <span className="font-bold">{residentInfo?.origin.name}</span></li>
-                    <li>Times appear <span className="font-bold">{residentInfo?.episode.length} times</span></li>
+            <div className="p-4 text-white flex flex-col gap-6">
+                <h3 className="text-center font-bold text-lg">{residentInfo?.name}</h3>
+                <ul className="text-[#938686] text-sm font-normal flex flex-col gap-4">
+                    <li className="flex gap-16">Specie <span className="font-medium text-white">{residentInfo?.species}</span></li>
+                    <li className="flex gap-16">Origin <span className="font-medium text-white">{residentInfo?.origin.name}</span></li>
+                    <li className="flex gap-3">Times appear <span className="font-medium text-white">{residentInfo?.episode.length} times</span></li>
                 </ul>
             </div>
         </article>
